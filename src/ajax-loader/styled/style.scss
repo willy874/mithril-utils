@@ -1,0 +1,96 @@
+.ajax-loader-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.ajax_loader {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    position: fixed;
+    padding: 10px;
+    top: 60px;
+    right: 30px;
+    margin-bottom: .25em;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    opacity: 1;
+    z-index: 9999;
+
+    &.exit {
+        animation-duration: 200ms;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        animation-name: ajax_loader_out;
+        animation-iteration-count: 1;
+        opacity: 0;
+    }
+}
+
+.ajax_loader_icon {
+    border: 0.2em solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation-duration: 250ms;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: ajax_loader;
+    position: relative;
+    width: 1em;
+    height: 1em;
+
+    &:before {
+        content: '';
+        display: block;
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: -.2em;
+        left: -.2em;
+        border: .2em solid #fff;
+        border-radius: 50%;
+        opacity: .5;
+    }
+}
+
+@keyframes ajax_loader_in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ajax_loader_out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ajax_loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

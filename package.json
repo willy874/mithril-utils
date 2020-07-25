@@ -1,0 +1,24 @@
+{
+  "name": "miix-utils",
+  "version": "0.0.1",
+  "description": "m2x mithirl開發元件",
+  "main": "dist/bundle.js",
+  "files": [
+    "dist"
+  ],
+  "style": "dist/styles.css",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "mithril": "^2.0.4",
+    "validate.js": "^0.13.1"
+  },
+  "devDependencies": {
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.1.1"
+  }
+}
